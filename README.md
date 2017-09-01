@@ -36,7 +36,7 @@ Playgrounds about running CPU bound operations using Workers.
 | Main Thread   | 0.69ms               | 1.42ms         | 0.82ms        |
 | 1 Web Worker  | 27.35ms              | 20.43ms        | 14.25ms       |
 | 2 Web Workers | 17.65ms              | 12.49ms        | 9.36ms        |
-| 3 Web Workers | 18.49ms              | 20.26ms        | 31.76ms       |
+| 3 Web Workers | 18.49ms              | 20.26ms        | 31.76ms       |
 | 4 Web Workers | 21.63ms              | 18.52ms        | 19.91ms       |
 | 5 Web Workers | 25.36ms              | 21.36ms        | 43.16ms       |
 
@@ -46,7 +46,7 @@ Playgrounds about running CPU bound operations using Workers.
 | Main Thread   | 32.35ms              | 2.77ms         | 4.45ms        |
 | 1 Web Worker  | 73.06ms              | 62.63ms        | 28.32ms       |
 | 2 Web Workers | 34.30ms              | 46.84ms        | 25.36ms       |
-| 3 Web Workers | 31.42ms              | 55.59ms        | 34.85ms       |
+| 3 Web Workers | 31.42ms              | 55.59ms        | 34.85ms       |
 | 4 Web Workers | 35.99ms              | 54.88ms        | 32.40ms       |
 | 5 Web Workers | 38.10ms              | 48.21ms        | 37.74ms       |
 
@@ -56,7 +56,7 @@ Playgrounds about running CPU bound operations using Workers.
 | Main Thread   | 321.18ms             | 10.10ms        | 45.36ms       |
 | 1 Web Worker  | 548.60ms             | 429.95ms       | 163.62ms      |
 | 2 Web Workers | 342.99ms             | 327.71ms       | 115.92ms      |
-| 3 Web Workers | 360.71ms             | 328.98ms       | 117.22ms      |
+| 3 Web Workers | 360.71ms             | 328.98ms       | 117.22ms      |
 | 4 Web Workers | 266.26ms             | 355.36ms       | 116.97ms      |
 | 5 Web Workers | 259.22ms             | 319.85ms       | 116.30ms      |
 
@@ -66,6 +66,6 @@ Playgrounds about running CPU bound operations using Workers.
 | Main Thread   | 3127.18ms            | 127.83ms       | 470.45ms      |
 | 1 Web Worker  | 5404.80ms            | 4738.69ms      | 1565.92ms     |
 | 2 Web Workers | 3372.53ms            | 3538.97ms      | 1079.56ms     |
-| 3 Web Workers | 2713.30ms            | 3272.95ms      | 972.53ms      |
+| 3 Web Workers | 2713.30ms            | 3272.95ms      | 972.53ms      |
 | 4 Web Workers | 2519.60ms            | 3478.77ms      | 975.76ms      |
 | 5 Web Workers | 2523.37ms            | 3160.04ms      | 980.84ms      |
