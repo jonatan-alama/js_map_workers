@@ -6,8 +6,9 @@ Playgrounds about running CPU bound operations using Workers.
 ### Map an array of x integers
 
 - operation is `map(n => n * 10)`
-- *main thread* uses the `Array.map` method directly
-- *x workers* divides the task into x subtasks, runs them in separate workers and joins the results
+- *Main Thread* uses the `Array.map` method directly
+- *x Web Workers* divides the task into x subtasks, runs them in separate workers and joins the results
+- 1,000,000/10,000,000 items have a second implementation using `SharedArrayBuffer` for passing data to the workers
 - MacBook Pro 2.2 GHz Intel Core i7 16 GB
 
 #### 100 items
@@ -50,22 +51,22 @@ Playgrounds about running CPU bound operations using Workers.
 | 4 Web Workers | 35.99ms              | 54.88ms        | 32.40ms       |
 | 5 Web Workers | 38.10ms              | 48.21ms        | 37.74ms       |
 
-#### 1,000,000 items
-| Test          | Chrome 60.0.3112.101 | Firefox 55.0.3 | Safari 10.1.2 |
-| ------------- | -------------------- | -------------- | ------------- |
-| Main Thread   | 321.18ms             | 10.10ms        | 45.36ms       |
-| 1 Web Worker  | 548.60ms             | 429.95ms       | 163.62ms      |
-| 2 Web Workers | 342.99ms             | 327.71ms       | 115.92ms      |
-| 3 Web Workers | 360.71ms             | 328.98ms       | 117.22ms      |
-| 4 Web Workers | 266.26ms             | 355.36ms       | 116.97ms      |
-| 5 Web Workers | 259.22ms             | 319.85ms       | 116.30ms      |
+#### 1,000,000 items (Worker / Worker + SharedArrayBuffer)
+| Test          | Chrome 60.0.3112.101 | Firefox 55.0.3    | Safari 10.1.2     |
+| ------------- | -------------------- | ----------------- | ----------------- |
+| Main Thread   | 321.18ms             | 10.10ms           | 45.36ms           |
+| 1 Web Worker  | 548.60ms/99.58ms     | 429.95ms/172.17ms | 163.62ms/151.13ms |
+| 2 Web Workers | 342.99ms/65.84ms     | 327.71ms/98.99ms  | 115.92ms/55.49ms  |
+| 3 Web Workers | 360.71ms/60.17ms     | 328.98ms/85.90ms  | 117.22ms/51.30ms  |
+| 4 Web Workers | 266.26ms/66.86ms     | 355.36ms/99.41ms  | 116.97ms/94.37ms  |
+| 5 Web Workers | 259.22ms/76.78ms     | 319.85ms/72.46ms  | 116.30ms/59.76ms  |
 
-#### 10,000,000 items
-| Test          | Chrome 60.0.3112.101 | Firefox 55.0.3 | Safari 10.1.2 |
-| ------------- | -------------------- | -------------- | ------------- |
-| Main Thread   | 3127.18ms            | 127.83ms       | 470.45ms      |
-| 1 Web Worker  | 5404.80ms            | 4738.69ms      | 1565.92ms     |
-| 2 Web Workers | 3372.53ms            | 3538.97ms      | 1079.56ms     |
-| 3 Web Workers | 2713.30ms            | 3272.95ms      | 972.53ms      |
-| 4 Web Workers | 2519.60ms            | 3478.77ms      | 975.76ms      |
-| 5 Web Workers | 2523.37ms            | 3160.04ms      | 980.84ms      |
+#### 10,000,000 items (Worker / Worker + SharedArrayBuffer)
+| Test          | Chrome 60.0.3112.101 | Firefox 55.0.3      | Safari 10.1.2      |
+| ------------- | -------------------- | ------------------- | ------------------ |
+| Main Thread   | 3127.18ms            | 127.83ms            | 470.45ms           |
+| 1 Web Worker  | 5404.80ms/747.51ms   | 4738.69ms/1641.23ms | 1565.92ms/849.99ms |
+| 2 Web Workers | 3372.53ms/423.98ms   | 3538.97ms/986.83ms  | 1079.56ms/394.46ms |
+| 3 Web Workers | 2713.30ms/324.14ms   | 3272.95ms/670.99ms  | 972.53ms/327.34ms  |
+| 4 Web Workers | 2519.60ms/300.90ms   | 3478.77ms/538.51ms  | 975.76ms/295.79ms  |
+| 5 Web Workers | 2523.37ms/326.75ms   | 3160.04ms/643.82ms  | 980.84ms/357.67ms  |
