@@ -55,7 +55,7 @@ Playgrounds about running CPU bound operations using Workers.
 | Test          | Chrome 60.0.3112.101 | Firefox 55.0.3    | Safari 10.1.2     |
 | ------------- | -------------------- | ----------------- | ----------------- |
 | Main Thread   | 321.18ms             | 10.10ms           | 45.36ms           |
-| 1 Web Worker  | 548.60ms/99.58ms     | 429.95ms/172.17ms | 163.62ms/151.13ms |
+| 1 Web Worker  | 548.60ms/99.58ms     | 429.95ms/172.17ms | 163.62ms/151.13ms |
 | 2 Web Workers | 342.99ms/65.84ms     | 327.71ms/98.99ms  | 115.92ms/55.49ms  |
 | 3 Web Workers | 360.71ms/60.17ms     | 328.98ms/85.90ms  | 117.22ms/51.30ms  |
 | 4 Web Workers | 266.26ms/66.86ms     | 355.36ms/99.41ms  | 116.97ms/94.37ms  |
